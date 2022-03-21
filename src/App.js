@@ -2,8 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './Component/Clock.js'
+import './Component/Banner.js'
 
 import { Clock } from './Component/Clock.js';
+import { Banner } from './Component/Banner.js';
 
 const element = (
   <div>
@@ -39,17 +41,24 @@ function App() {
               <a class="farm_factory" href='index.html'>Farm Factory  </a>
           </span>
           <span>
-              <a class="home" href='index.html'>HOME  </a>
+              <button class="home" href='index.html'>HOME</button>
           </span>
           <span>
-              <a class="notice" href='index.html'>공지사항  </a>
+              <button class="notice" href='index.html'>공지사항</button>
           </span>
           <span>
-              <a class="service" href='index.html'>서비스  </a>
+              <button class="service" href='index.html'>서비스</button>
           </span>
-          <span>
-              <img class="link_menu">
-              </img>
+          <span class = "dropdown">
+              <button class="link_menu">
+              </button>
+              {/* <div class="dropdown-content">
+                <li>
+                  <a>메뉴1</a>
+                  <a>메뉴1</a>
+                  <a>메뉴1</a>
+                </li>
+              </div> */}
           </span>
         </div>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -60,9 +69,7 @@ function App() {
         <div>
           <ul>
             <a>
-              <img src="https://www.shinsegaegroupnewsroom.com/wp-content/uploads/2021/04/1-%EC%8B%A0%EC%84%B8%EA%B3%84-%EC%9A%A9%EC%9D%B8%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8C%9C210422-0183.jpg">
-                
-              </img>
+              <Banner/>
             </a>
           </ul>
         </div>
